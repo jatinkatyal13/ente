@@ -16,7 +16,6 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
 FROM alpine:3.21
 RUN apk add libsodium-dev
 COPY --from=builder /etc/ente/museum .
-COPY configurations configurations
 COPY migrations migrations
 COPY mail-templates mail-templates
 

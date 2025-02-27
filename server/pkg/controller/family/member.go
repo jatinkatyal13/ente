@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
+
 	"github.com/ente-io/museum/ente"
 	"github.com/ente-io/stacktrace"
 	"github.com/sirupsen/logrus"
@@ -98,25 +99,9 @@ func (c *Controller) AcceptInvite(ctx context.Context, token string) (ente.Accep
 		}
 	}
 
-	bonus, bonusErr := c.UserCacheCtrl.GetActiveStorageBonus(ctx, adminUser.ID)
-	if bonusErr != nil {
-		return ente.AcceptInviteResponse{}, bonusErr
-	}
-	adminSubscription, subErr := c.BillingCtrl.GetActiveSubscription(adminUser.ID)
-	if subErr != nil && !errors.Is(subErr, ente.ErrNoActiveSubscription) {
-		return ente.AcceptInviteResponse{}, stacktrace.Propagate(subErr, "")
-	}
-	adminUsableBonus := int64(0)
-
-	if subErr != nil && errors.Is(subErr, ente.ErrNoActiveSubscription) {
-		adminUsableBonus = bonus.GetUsableBonus(0)
-	} else {
-		adminUsableBonus = bonus.GetUsableBonus(adminSubscription.Storage)
-	}
-
 	return ente.AcceptInviteResponse{
 		AdminEmail: adminUser.Email,
-		Storage:    adminSubscription.Storage + adminUsableBonus,
-		ExpiryTime: adminSubscription.ExpiryTime,
+		Storage:    10,
+		ExpiryTime: 1000000,
 	}, nil
 }

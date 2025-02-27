@@ -3,6 +3,8 @@ package collections
 import (
 	"context"
 	"fmt"
+	"strings"
+
 	"github.com/ente-io/museum/ente"
 	"github.com/ente-io/museum/pkg/controller/access"
 	"github.com/ente-io/museum/pkg/utils/array"
@@ -12,7 +14,6 @@ import (
 	"github.com/gin-contrib/requestid"
 	"github.com/gin-gonic/gin"
 	log "github.com/sirupsen/logrus"
-	"strings"
 )
 
 func (c *CollectionController) Share(ctx *gin.Context, req ente.AlterShareRequest) ([]ente.CollectionUser, error) {
@@ -42,10 +43,6 @@ func (c *CollectionController) Share(ctx *gin.Context, req ente.AlterShareReques
 	}
 	if fromUserID != collection.Owner.ID {
 		return nil, stacktrace.Propagate(ente.ErrPermissionDenied, "")
-	}
-	err = c.BillingCtrl.HasActiveSelfOrFamilySubscription(fromUserID, true)
-	if err != nil {
-		return nil, stacktrace.Propagate(err, "")
 	}
 	err = c.CollectionRepo.Share(cID, fromUserID, toUserID, encryptedKey, role, time.Microseconds())
 	if err != nil {
@@ -87,10 +84,6 @@ func (c *CollectionController) JoinViaLink(ctx *gin.Context, req ente.JoinCollec
 		if passCheckErr := c.PublicCollectionCtrl.ValidateJWTToken(ctx, accessTokenJWT, *publicCollectionToken.PassHash); passCheckErr != nil {
 			return stacktrace.Propagate(passCheckErr, "")
 		}
-	}
-	err = c.BillingCtrl.HasActiveSelfOrFamilySubscription(collection.Owner.ID, true)
-	if err != nil {
-		return stacktrace.Propagate(err, "")
 	}
 	role := ente.VIEWER
 	if publicCollectionToken.EnableCollect {
@@ -193,10 +186,6 @@ func (c *CollectionController) ShareURL(ctx context.Context, userID int64, req e
 	if userID != collection.Owner.ID {
 		return ente.PublicURL{}, stacktrace.Propagate(ente.ErrPermissionDenied, "")
 	}
-	err = c.BillingCtrl.HasActiveSelfOrFamilySubscription(userID, true)
-	if err != nil {
-		return ente.PublicURL{}, stacktrace.Propagate(err, "")
-	}
 	response, err := c.PublicCollectionCtrl.CreateAccessToken(ctx, req)
 	if err != nil {
 		return ente.PublicURL{}, stacktrace.Propagate(err, "")
@@ -208,10 +197,6 @@ func (c *CollectionController) ShareURL(ctx context.Context, userID int64, req e
 func (c *CollectionController) UpdateShareURL(ctx context.Context, userID int64, req ente.UpdatePublicAccessTokenRequest) (
 	ente.PublicURL, error) {
 	if err := c.verifyOwnership(req.CollectionID, userID); err != nil {
-		return ente.PublicURL{}, stacktrace.Propagate(err, "")
-	}
-	err := c.BillingCtrl.HasActiveSelfOrFamilySubscription(userID, true)
-	if err != nil {
 		return ente.PublicURL{}, stacktrace.Propagate(err, "")
 	}
 	response, err := c.PublicCollectionCtrl.UpdateSharedUrl(ctx, req)

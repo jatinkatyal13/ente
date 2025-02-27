@@ -3,9 +3,10 @@ package user
 import (
 	"errors"
 	"fmt"
+	"strings"
+
 	"github.com/ente-io/museum/pkg/controller/collections"
 	"github.com/ente-io/museum/pkg/repo/two_factor_recovery"
-	"strings"
 
 	cache2 "github.com/ente-io/museum/ente/cache"
 	"github.com/ente-io/museum/pkg/controller/discord"
@@ -110,7 +111,6 @@ func NewUserController(
 	hashingKeyBytes []byte,
 	authCache *cache.Cache,
 	jwtSecretBytes []byte,
-	billingController *controller.BillingController,
 	familyController *family.Controller,
 	discordController *discord.DiscordController,
 	mailingListsController *controller.MailingListsController,
@@ -135,7 +135,6 @@ func NewUserController(
 		HashingKey:             hashingKeyBytes,
 		Cache:                  authCache,
 		JwtSecret:              jwtSecretBytes,
-		BillingController:      billingController,
 		FamilyController:       familyController,
 		DiscordController:      discordController,
 		MailingListsController: mailingListsController,

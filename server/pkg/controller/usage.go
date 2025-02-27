@@ -2,12 +2,9 @@ package controller
 
 import (
 	"context"
-	"errors"
-	"fmt"
 	"sync"
 
 	"github.com/ente-io/museum/ente"
-	bonus "github.com/ente-io/museum/ente/storagebonus"
 	"github.com/ente-io/museum/pkg/controller/storagebonus"
 	"github.com/ente-io/museum/pkg/controller/usercache"
 	"github.com/ente-io/museum/pkg/repo"
@@ -17,7 +14,6 @@ import (
 // UsageController exposes functions which can be used to check around storage
 type UsageController struct {
 	mu                sync.Mutex
-	BillingCtrl       *BillingController
 	StorageBonusCtrl  *storagebonus.Controller
 	UserCacheCtrl     *usercache.Controller
 	UsageRepo         *repo.UsageRepository
@@ -67,93 +63,5 @@ func (c *UsageController) canUploadFile(ctx context.Context, userID int64, size 
 		}
 	}
 
-	familyAdminID, err := c.UserRepo.GetFamilyAdminID(userID)
-	if err != nil {
-		return stacktrace.Propagate(err, "")
-	}
-	var subscriptionAdminID int64
-	var subscriptionUserIDs []int64
-
-	// if user is part of a family group, validate if subscription of familyAdmin is valid & member's total storage
-	// is less than the storage accordingly to subscription plan of the admin
-	var memberStorageLimit *int64
-	if familyAdminID != nil {
-		familyMembers, err := c.FamilyRepo.GetMembersWithStatus(*familyAdminID, repo.ActiveFamilyMemberStatus)
-		if err != nil {
-			return stacktrace.Propagate(err, "failed to fetch family members")
-		}
-		subscriptionAdminID = *familyAdminID
-		for _, familyMember := range familyMembers {
-			subscriptionUserIDs = append(subscriptionUserIDs, familyMember.MemberUserID)
-			if familyMember.MemberUserID == userID && familyMember.MemberUserID != *familyAdminID {
-				memberStorageLimit = familyMember.StorageLimit
-			}
-		}
-	} else {
-		subscriptionAdminID = userID
-		subscriptionUserIDs = []int64{userID}
-	}
-
-	var subStorage int64
-	var bonus *bonus.ActiveStorageBonus
-	sub, err := c.BillingCtrl.GetActiveSubscription(subscriptionAdminID)
-	if err != nil {
-		subStorage = 0
-		if errors.Is(err, ente.ErrNoActiveSubscription) {
-			bonusRes, bonErr := c.UserCacheCtrl.GetActiveStorageBonus(ctx, subscriptionAdminID)
-			if bonErr != nil {
-				return stacktrace.Propagate(bonErr, "failed to get bonus data")
-			}
-			if bonusRes.GetMaxExpiry() <= 0 {
-				return stacktrace.Propagate(err, "all bonus & plan expired")
-			}
-			bonus = bonusRes
-		} else {
-			return stacktrace.Propagate(err, "")
-		}
-	} else {
-		subStorage = sub.Storage
-	}
-	usage, err := c.UsageRepo.GetCombinedUsage(ctx, subscriptionUserIDs)
-	if err != nil {
-		return stacktrace.Propagate(err, "")
-	}
-	newUsage := usage
-
-	if size != nil {
-		// Add the size of the file to be uploaded to the current usage and buffer in sub.Storage
-		newUsage += *size
-		subStorage += StorageOverflowAboveSubscriptionLimit
-	}
-	if newUsage > subStorage {
-		if bonus == nil {
-			// Check if the subAdmin has any storage bonus
-			bonus, err = c.UserCacheCtrl.GetActiveStorageBonus(ctx, subscriptionAdminID)
-			if err != nil {
-				return stacktrace.Propagate(err, "failed to get storage bonus")
-			}
-		}
-		var eligibleBonus = bonus.GetUsableBonus(subStorage)
-		if newUsage > (subStorage + eligibleBonus) {
-			return stacktrace.Propagate(ente.ErrStorageLimitExceeded, "")
-		}
-	}
-
-	// Get particular member's storage and check if the file size is larger than the size of the storage allocated
-	// to the Member and fail if its too large.
-	if subscriptionAdminID != userID && memberStorageLimit != nil {
-		memberUsage, memberUsageErr := c.UsageRepo.GetUsage(userID)
-		if memberUsageErr != nil {
-			return stacktrace.Propagate(memberUsageErr, "Couldn't get Members Usage")
-		}
-		if size != nil {
-			memberUsage += *size
-		}
-		// Upload fail if memberStorageLimit > memberUsage ((fileSize + total Usage) + StorageOverflowAboveSubscriptionLimit (50mb))
-		if memberUsage > (*memberStorageLimit + StorageOverflowAboveSubscriptionLimit) {
-			return stacktrace.Propagate(ente.ErrStorageLimitExceeded, fmt.Sprintf("member Storage Limit Exceeded (limit %d, usage %d)", *memberStorageLimit, memberUsage))
-
-		}
-	}
 	return nil
 }

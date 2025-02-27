@@ -3,6 +3,7 @@ package collections
 import (
 	"context"
 	"fmt"
+
 	"github.com/ente-io/museum/pkg/controller"
 	"github.com/ente-io/museum/pkg/controller/access"
 	"github.com/ente-io/museum/pkg/controller/email"
@@ -27,7 +28,6 @@ type CollectionController struct {
 	PublicCollectionCtrl *controller.PublicCollectionController
 	EmailCtrl            *email.EmailNotificationController
 	AccessCtrl           access.Controller
-	BillingCtrl          *controller.BillingController
 	CollectionRepo       *repo.CollectionRepository
 	UserRepo             *repo.UserRepository
 	FileRepo             *repo.FileRepository

@@ -5,7 +5,6 @@ import (
 	"database/sql"
 	b64 "encoding/base64"
 	"fmt"
-	"github.com/ente-io/museum/pkg/controller/collections"
 	"net/http"
 	"os"
 	"os/signal"
@@ -14,6 +13,8 @@ import (
 	"strings"
 	"syscall"
 	"time"
+
+	"github.com/ente-io/museum/pkg/controller/collections"
 
 	"github.com/ente-io/museum/ente/base"
 	"github.com/ente-io/museum/pkg/controller/emergency"
@@ -25,11 +26,8 @@ import (
 
 	"github.com/ente-io/museum/pkg/controller/cast"
 
-	"github.com/ente-io/museum/pkg/controller/commonbilling"
-
 	cache2 "github.com/ente-io/museum/ente/cache"
 	"github.com/ente-io/museum/pkg/controller/discord"
-	"github.com/ente-io/museum/pkg/controller/offer"
 	"github.com/ente-io/museum/pkg/controller/usercache"
 
 	"github.com/GoKillers/libsodium-go/sodium"
@@ -61,7 +59,6 @@ import (
 	"github.com/ente-io/museum/pkg/repo/remotestore"
 	storageBonusRepo "github.com/ente-io/museum/pkg/repo/storagebonus"
 	userEntityRepo "github.com/ente-io/museum/pkg/repo/userentity"
-	"github.com/ente-io/museum/pkg/utils/billing"
 	"github.com/ente-io/museum/pkg/utils/config"
 	"github.com/ente-io/museum/pkg/utils/s3config"
 	timeUtil "github.com/ente-io/museum/pkg/utils/time"
@@ -201,22 +198,7 @@ func main() {
 	userCacheCtrl := &usercache.Controller{UserCache: userCache, FileRepo: fileRepo,
 		UsageRepo: usageRepo, TrashRepo: trashRepo,
 		StoreBonusRepo: storagBonusRepo}
-	offerController := offer.NewOfferController(*userRepo, discordController, storagBonusRepo, userCacheCtrl)
-	plans := billing.GetPlans()
-	defaultPlan := billing.GetDefaultPlans(plans)
-	stripeClients := billing.GetStripeClients()
-	commonBillController := commonbilling.NewController(emailNotificationCtrl, storagBonusRepo, userRepo, usageRepo, billingRepo)
-	appStoreController := controller.NewAppStoreController(defaultPlan,
-		billingRepo, fileRepo, userRepo, commonBillController)
 	remoteStoreController := &remoteStoreCtrl.Controller{Repo: remoteStoreRepository}
-	playStoreController := controller.NewPlayStoreController(defaultPlan,
-		billingRepo, fileRepo, userRepo, storagBonusRepo, commonBillController)
-	stripeController := controller.NewStripeController(plans, stripeClients,
-		billingRepo, fileRepo, userRepo, storagBonusRepo, discordController, emailNotificationCtrl, offerController, commonBillController)
-	billingController := controller.NewBillingController(plans,
-		appStoreController, playStoreController, stripeController,
-		discordController, emailNotificationCtrl,
-		billingRepo, userRepo, usageRepo, storagBonusRepo, commonBillController)
 	pushController := controller.NewPushController(pushRepo, taskLockingRepo, hostName)
 	mailingListsController := controller.NewMailingListsController()
 
@@ -243,7 +225,6 @@ func main() {
 	)
 
 	usageController := &controller.UsageController{
-		BillingCtrl:       billingController,
 		StorageBonusCtrl:  storageBonusCtrl,
 		UserCacheCtrl:     userCacheCtrl,
 		UsageRepo:         usageRepo,
@@ -292,7 +273,6 @@ func main() {
 
 	familyController := &family.Controller{
 		FamilyRepo:    familyRepo,
-		BillingCtrl:   billingController,
 		UserRepo:      userRepo,
 		UserCacheCtrl: userCacheCtrl,
 		UsageRepo:     usageRepo,
@@ -315,7 +295,6 @@ func main() {
 		UserRepo:             userRepo,
 		FileRepo:             fileRepo,
 		CastRepo:             &castDb,
-		BillingCtrl:          billingController,
 		QueueRepo:            queueRepo,
 		TaskRepo:             taskLockingRepo,
 	}
@@ -341,7 +320,6 @@ func main() {
 		hashingKeyBytes,
 		authCache,
 		jwtSecretBytes,
-		billingController,
 		familyController,
 		discordController,
 		mailingListsController,
@@ -361,7 +339,6 @@ func main() {
 		PublicCollectionCtrl: publicCollectionCtrl,
 		CollectionRepo:       collectionRepo,
 		Cache:                accessTokenCache,
-		BillingCtrl:          billingController,
 		DiscordController:    discordController,
 	}
 
@@ -641,37 +618,6 @@ func main() {
 	privateAPI.GET("/emergency-contacts/recovery-info/:id", emergencyHandler.GetRecoveryInfo)
 	privateAPI.POST("/emergency-contacts/init-change-password", emergencyHandler.InitChangePassword)
 	privateAPI.POST("/emergency-contacts/change-password", emergencyHandler.ChangePassword)
-	billingHandler := &api.BillingHandler{
-		Controller:          billingController,
-		AppStoreController:  appStoreController,
-		PlayStoreController: playStoreController,
-		StripeController:    stripeController,
-	}
-	publicAPI.GET("/billing/plans/v2", billingHandler.GetPlansV2)
-	privateAPI.GET("/billing/user-plans", billingHandler.GetUserPlans)
-	privateAPI.GET("/billing/usage", billingHandler.GetUsage)
-	privateAPI.GET("/billing/subscription", billingHandler.GetSubscription)
-	privateAPI.POST("/billing/verify-subscription", billingHandler.VerifySubscription)
-	publicAPI.POST("/billing/notify/android", billingHandler.AndroidNotificationHandler)
-	publicAPI.POST("/billing/notify/ios", billingHandler.IOSNotificationHandler)
-	publicAPI.POST("/billing/notify/stripe", billingHandler.StripeINNotificationHandler)
-	// after the StripeIN customers are completely migrated, we can change notify/stripe/us to notify/stripe and deprecate this endpoint
-	publicAPI.POST("/billing/notify/stripe/us", billingHandler.StripeUSNotificationHandler)
-	privateAPI.GET("/billing/stripe/customer-portal", billingHandler.GetStripeCustomerPortal)
-	privateAPI.POST("/billing/stripe/cancel-subscription", billingHandler.StripeCancelSubscription)
-	privateAPI.POST("/billing/stripe/activate-subscription", billingHandler.StripeActivateSubscription)
-	paymentJwtAuthAPI.GET("/billing/stripe-account-country", billingHandler.GetStripeAccountCountry)
-	paymentJwtAuthAPI.GET("/billing/stripe/checkout-session", billingHandler.GetCheckoutSession)
-	paymentJwtAuthAPI.POST("/billing/stripe/update-subscription", billingHandler.StripeUpdateSubscription)
-
-	storageBonusHandler := &api.StorageBonusHandler{
-		Controller: storageBonusCtrl,
-	}
-
-	privateAPI.GET("/storage-bonus/details", storageBonusHandler.GetStorageBonusDetails)
-	privateAPI.POST("/storage-bonus/change-code", storageBonusHandler.UpdateReferralCode)
-	privateAPI.GET("/storage-bonus/referral-view", storageBonusHandler.GetReferralView)
-	privateAPI.POST("/storage-bonus/referral-claim", storageBonusHandler.ClaimReferral)
 
 	adminHandler := &api.AdminHandler{
 		QueueRepo:               queueRepo,
@@ -686,7 +632,6 @@ func main() {
 		FileRepo:                fileRepo,
 		StorageBonusRepo:        storagBonusRepo,
 		BillingRepo:             billingRepo,
-		BillingController:       billingController,
 		ObjectCleanupController: objectCleanupController,
 		MailingListsController:  mailingListsController,
 		DiscordController:       discordController,
@@ -756,9 +701,6 @@ func main() {
 	privateAPI.POST("/push/token", pushHandler.AddToken)
 
 	embeddingController := embeddingCtrl.New(embeddingRepo, objectCleanupController, queueRepo, taskLockingRepo, fileRepo, hostName)
-
-	offerHandler := &api.OfferHandler{Controller: offerController}
-	publicAPI.GET("/offers/black-friday", offerHandler.GetBlackFridayOffers)
 
 	setKnownAPIs(server.Routes())
 	setupAndStartBackgroundJobs(objectCleanupController, replicationController3, fileDataCtrl)

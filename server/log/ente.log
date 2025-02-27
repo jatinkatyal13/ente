@@ -1,0 +1,259 @@
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T00:57:31+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T00:57:31+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T00:57:31+05:30"}
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T00:58:09+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T00:58:09+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T00:58:09+05:30"}
+{"file":"main.go:847","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T00:58:09+05:30"}
+{"file":"main.go:856","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T00:58:09+05:30"}
+{"file":"main.go:865","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T00:58:09+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T00:58:09+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T00:58:09+05:30"}
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T00:58:32+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T00:58:32+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T00:58:32+05:30"}
+{"file":"main.go:847","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T00:58:32+05:30"}
+{"file":"main.go:856","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T00:58:32+05:30"}
+{"file":"main.go:865","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T00:58:32+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T00:58:32+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T00:58:32+05:30"}
+{"file":"offer.go:45","func":"NewOfferController","level":"fatal","msg":"Error getting offer config file: required file not found at data/billing/black-friday.json","time":"2025-02-27T00:58:32+05:30"}
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T00:58:44+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T00:58:44+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T00:58:44+05:30"}
+{"file":"main.go:847","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T00:58:44+05:30"}
+{"file":"main.go:856","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T00:58:44+05:30"}
+{"file":"main.go:865","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T00:58:44+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T00:58:44+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T00:58:44+05:30"}
+{"file":"offer.go:45","func":"NewOfferController","level":"fatal","msg":"Error getting offer config file: required file not found at data/billing/black-friday.json","time":"2025-02-27T00:58:44+05:30"}
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T01:05:19+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T01:05:19+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T01:05:19+05:30"}
+{"file":"main.go:847","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T01:05:19+05:30"}
+{"file":"main.go:856","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T01:05:19+05:30"}
+{"file":"main.go:865","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T01:05:19+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T01:05:19+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T01:05:19+05:30"}
+{"file":"offer.go:45","func":"NewOfferController","level":"fatal","msg":"Error getting offer config file: required file not found at data/billing/black-friday.json","time":"2025-02-27T01:05:19+05:30"}
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T01:05:29+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T01:05:29+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T01:05:29+05:30"}
+{"file":"main.go:847","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T01:05:29+05:30"}
+{"file":"main.go:856","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T01:05:29+05:30"}
+{"file":"main.go:865","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T01:05:29+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T01:05:29+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T01:05:29+05:30"}
+{"file":"offer.go:45","func":"NewOfferController","level":"fatal","msg":"Error getting offer config file: required file not found at data/billing/black-friday.json","time":"2025-02-27T01:05:29+05:30"}
+{"file":"main.go:104","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T01:06:09+05:30"}
+{"file":"main.go:835","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T01:06:15+05:30"}
+{"file":"main.go:842","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T01:06:15+05:30"}
+{"file":"main.go:847","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T01:06:15+05:30"}
+{"file":"main.go:856","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T01:06:15+05:30"}
+{"file":"main.go:865","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T01:06:15+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T01:06:26+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T01:06:31+05:30"}
+{"file":"offer.go:45","func":"NewOfferController","level":"fatal","msg":"Error getting offer config file: required file not found at data/billing/black-friday.json","time":"2025-02-27T01:07:05+05:30"}
+{"file":"main.go:105","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T01:07:45+05:30"}
+{"file":"main.go:836","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T01:07:45+05:30"}
+{"file":"main.go:843","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T01:07:45+05:30"}
+{"file":"main.go:848","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T01:07:45+05:30"}
+{"file":"main.go:857","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T01:07:45+05:30"}
+{"file":"main.go:866","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T01:07:45+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T01:07:45+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T01:07:45+05:30"}
+{"file":"offer.go:45","func":"NewOfferController","level":"fatal","msg":"Error getting offer config file: required file not found at data/billing/black-friday.json","time":"2025-02-27T01:07:57+05:30"}
+{"file":"main.go:101","func":"main","level":"info","msg":"Booting up production server with commit #","time":"2025-02-27T01:21:24+05:30"}
+{"file":"main.go:777","func":"setupDatabase","level":"info","msg":"Setting up db","time":"2025-02-27T01:21:24+05:30"}
+{"file":"main.go:784","func":"setupDatabase","level":"info","msg":"Connected to DB","time":"2025-02-27T01:21:24+05:30"}
+{"file":"main.go:789","func":"setupDatabase","level":"info","msg":"Pinged DB","time":"2025-02-27T01:21:24+05:30"}
+{"file":"main.go:798","func":"setupDatabase","level":"info","msg":"Loaded migration scripts","time":"2025-02-27T01:21:24+05:30"}
+{"file":"main.go:807","func":"setupDatabase","level":"info","msg":"Database was configured successfully.","time":"2025-02-27T01:21:24+05:30"}
+{"file":"lock.go:65","func":"ReleaseHostLock","level":"info","msg":"Released 0 locks held by JLMP10759","time":"2025-02-27T01:21:24+05:30"}
+{"file":"s3config.go:114","func":"initialize","level":"info","msg":"Hot storage: b2-eu-cen (secondary: b2-eu-cen)","time":"2025-02-27T01:21:24+05:30"}
+{"file":"push.go:55","func":"NewPushController","level":"error","msg":"error creating Firebase client:  --- at /Users/jatin.katyal/Lab/ente/server/pkg/controller/push.go:63 (newFirebaseClient) ---\nCaused by: required file not found at credentials/fcm-service-account.json","time":"2025-02-27T01:21:31+05:30"}
+{"file":"main.go:828","func":"setupAndStartBackgroundJobs","level":"info","msg":"Skipping Replication as replication is disabled","time":"2025-02-27T01:21:31+05:30"}
+{"file":"object_cleanup.go:107","func":"StartRemovingUnreportedObjects","level":"info","msg":"Starting 1 workers to remove-unreported-objects","time":"2025-02-27T01:21:31+05:30"}
+{"file":"delete.go:23","func":"startDeleteWorkers","level":"info","msg":"Starting 1 delete workers for fileData","time":"2025-02-27T01:21:31+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T01:21:31+05:30"}
+{"file":"discord.go:56","func":"sendMessage","level":"info","msg":"Skipping sending Discord message: JLMP10759 has taken off 🚀","time":"2025-02-27T01:21:31+05:30"}
+{"file":"main.go:720","func":"main","level":"info","msg":"We have lift-off.","time":"2025-02-27T01:21:31+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T01:21:32+05:30"}
+{"file":"repository.go:79","func":"DeleteOldKeys","level":"info","msg":"Deleted old keys less than 1740595892008859 old","time":"2025-02-27T01:21:32+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T01:22:31+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T01:22:31+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"ef388b38-7ae5-4938-b3db-0d554ffe485a","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T01:22:31+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T01:23:51+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T01:23:51+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T01:23:51+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"f1c998b1-f505-4847-93b5-2c772168d854","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T01:23:51+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T01:50:11+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T01:50:11+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T01:50:11+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T01:50:11+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T01:50:11+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"21d4ada8-a6ce-4c42-86b8-4f770f380bf9","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T01:50:11+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T02:17:35+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T02:17:35+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T02:17:35+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T02:17:35+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T02:17:35+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"d0f7b14b-02c7-4f21-ae29-e7e3fb254cfc","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T02:17:35+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T02:51:09+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T02:51:09+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T02:51:09+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T02:51:09+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"eb7978d2-6fa1-43cf-9763-bd1fcec88b95","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T02:51:09+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T02:51:09+05:30"}
+{"file":"repository.go:79","func":"DeleteOldKeys","level":"info","msg":"Deleted old keys less than 1740601269660241 old","time":"2025-02-27T02:51:09+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T03:16:40+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T03:16:40+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T03:24:02+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T03:24:02+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T03:24:02+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T03:24:02+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"99782a65-c6b9-4948-8834-7e1be8fc0c73","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T03:24:02+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T03:24:02+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T03:57:33+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T03:57:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T03:57:33+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T03:57:33+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T03:57:33+05:30"}
+{"file":"repository.go:79","func":"DeleteOldKeys","level":"info","msg":"Deleted old keys less than 1740605253879765 old","time":"2025-02-27T03:57:33+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"d4afa0a6-94f3-4596-8a5f-ac5001e64781","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T03:57:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T04:27:35+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T04:27:35+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T04:27:35+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T04:27:35+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T04:27:35+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"3deb717d-0ac2-4da2-9d1e-d97c8d4ec76a","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T04:27:35+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T04:56:29+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T04:56:29+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T04:56:29+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T04:56:29+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T04:56:29+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"c8674aab-2dfa-4705-b624-d3f0a50c5aba","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T04:56:29+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T05:27:25+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T05:27:25+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T05:27:25+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T05:27:25+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"5a809534-ac97-47b2-a802-cdd3c97a4632","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T05:27:25+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T05:27:25+05:30"}
+{"file":"repository.go:79","func":"DeleteOldKeys","level":"info","msg":"Deleted old keys less than 1740610645148957 old","time":"2025-02-27T05:27:25+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T05:54:35+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T05:54:35+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T05:56:29+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T05:56:29+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T05:56:29+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T05:56:29+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T05:56:29+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"d8156c31-d33f-4976-be52-1f05b5716aaa","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T05:56:29+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T07:11:25+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T07:11:25+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T07:11:25+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T07:11:25+05:30"}
+{"file":"repository.go:79","func":"DeleteOldKeys","level":"info","msg":"Deleted old keys less than 1740616885309736 old","time":"2025-02-27T07:11:25+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"f5fbeaf3-3847-4dec-bf0c-d23ae73b67af","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T07:11:25+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T07:11:25+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:35:49+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T14:35:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:35:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:35:49+05:30"}
+{"file":"repository.go:79","func":"DeleteOldKeys","level":"info","msg":"Deleted old keys less than 1740643549863211 old","time":"2025-02-27T14:35:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"ebaf5084-9bae-41f8-8db7-307ccba92525","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:35:49+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T14:35:49+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:36:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:36:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"e72c760f-e5f9-4a91-8e5b-e0db67e7b4ff","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:36:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:37:30+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:37:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:37:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"bb1234ca-2efd-4044-aa9c-8353762b59e0","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:37:49+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T14:38:33+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T14:38:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:38:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:38:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"799d370b-b67c-409a-854f-cf58aaa99633","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:38:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:39:11+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:39:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:39:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"124664a5-a4ba-4205-81f0-a58de46a0739","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:39:49+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:40:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:40:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"75a2421b-54e5-4ed3-a168-fc050edfe0a8","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:40:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:40:52+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:41:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:41:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"b538bf96-4e50-4986-a69a-b49b86177946","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:41:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:42:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:42:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:42:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"56ae1fa9-d0b3-4551-94f0-4af461b2c6c0","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:42:49+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T14:43:33+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T14:43:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:43:49+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T14:43:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:43:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"8be7b1ef-0fe7-4a33-a72d-741b20d6d482","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:43:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:44:14+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:44:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:44:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"5c14380b-4d9c-4f2e-90cc-66052b2f4941","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:44:49+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:45:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:45:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"500265b6-e3ff-4c58-9469-16d838b449ba","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:45:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:45:55+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:46:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:46:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"b525d029-e28a-4704-b234-5211e19d0a15","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:46:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:47:36+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:47:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:47:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"00ffb04b-eb8b-481b-a1f5-0f8992ecc6d4","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:47:49+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T14:48:33+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T14:48:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:48:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:48:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"95746fc6-8506-4809-9d76-d13e031fea04","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:48:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:49:17+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:49:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:49:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"6c7e2a26-3beb-495e-8b80-87a27789c30e","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:49:49+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:50:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:50:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"7a47b9fb-6b93-426a-a115-6952f861a9bd","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:50:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:50:58+05:30"}
+{"file":"file.go:681","func":"CleanupDeletedFiles","level":"info","msg":"Cleaning up deleted files","time":"2025-02-27T14:51:49+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:51:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:51:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"bb1f478f-298c-456b-9127-9edfe6ca4e43","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:51:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:52:39+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:52:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:52:49+05:30"}
+{"cron":"dropTrashedFileMetadata","file":"trash_file_metadata.go:67","func":"DropFileMetadataCron","level":"info","msg":"no pending entry","time":"2025-02-27T14:52:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"55fe30c5-3704-442c-a479-3b5a6944d0e1","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:52:49+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T14:53:33+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T14:53:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:53:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:53:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"2e1f00e0-96b4-4a8c-aa52-20a24529af82","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:53:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:54:20+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:54:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:54:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"cc41df35-f95b-484a-8268-57714ee15479","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:54:49+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:55:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:55:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"29d901c8-45ef-45eb-b2ba-3d2bba021f4c","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:55:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:56:01+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:56:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:56:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"927b3a80-ecaa-4740-ba78-a3430c04f4b5","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:56:49+05:30"}
+{"file":"delete.go:14","func":"CleanupDeletedEmbeddings","level":"info","msg":"Cleaning up deleted embeddings","time":"2025-02-27T14:57:42+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:57:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:57:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"fb0441af-786a-4072-b690-f0511aaefb4b","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:57:49+05:30"}
+{"file":"object_cleanup.go:132","func":"removeUnreportedObjects","level":"info","msg":"Removing unreported objects","task":"remove-unreported-objects","time":"2025-02-27T14:58:33+05:30"}
+{"file":"object_cleanup.go:152","func":"removeUnreportedObjects","level":"info","msg":"Removed 0 objects","task":"remove-unreported-objects","time":"2025-02-27T14:58:33+05:30"}
+{"file":"healthcheck.go:66","func":"PerformHealthCheck","level":"info","msg":"Performing HC","time":"2025-02-27T14:58:49+05:30"}
+{"file":"healthcheck.go:70","func":"PerformHealthCheck","level":"error","msg":"Could not obtain health check URL in non-local environment","time":"2025-02-27T14:58:49+05:30"}
+{"file":"trash.go:120","flow":"trash_collection","func":"func1","id":"f0f59f92-41f0-4d1e-a8b7-8222c1113abb","items_processed":0,"level":"info","msg":"cron run finished","time":"2025-02-27T14:58:49+05:30"}

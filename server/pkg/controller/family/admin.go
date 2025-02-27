@@ -9,7 +9,6 @@ import (
 	"github.com/ente-io/museum/ente"
 	"github.com/ente-io/museum/pkg/repo"
 	"github.com/ente-io/museum/pkg/utils/auth"
-	"github.com/ente-io/museum/pkg/utils/billing"
 	emailUtil "github.com/ente-io/museum/pkg/utils/email"
 	"github.com/ente-io/stacktrace"
 	"github.com/gin-gonic/gin"
@@ -33,10 +32,6 @@ const (
 
 // CreateFamily creates a family with current user as admin member
 func (c *Controller) CreateFamily(ctx context.Context, adminUserID int64) error {
-	err := c.BillingCtrl.IsActivePayingSubscriber(adminUserID)
-	if err != nil {
-		return stacktrace.Propagate(ente.ErrNoActiveSubscription, "you must be on a paid plan")
-	}
 	adminUser, err := c.UserRepo.Get(adminUserID)
 	if err != nil {
 		return err
@@ -58,10 +53,6 @@ func (c *Controller) CreateFamily(ctx context.Context, adminUserID int64) error 
 
 // InviteMember invites a user to join the family plan of admin User
 func (c *Controller) InviteMember(ctx *gin.Context, adminUserID int64, email string, storageLimit *int64) error {
-	err := c.BillingCtrl.IsActivePayingSubscriber(adminUserID)
-	if err != nil {
-		return stacktrace.Propagate(ente.ErrNoActiveSubscription, "you must be on a paid plan")
-	}
 	adminUser, err := c.UserRepo.Get(adminUserID)
 	if err != nil {
 		return err
@@ -100,13 +91,6 @@ func (c *Controller) InviteMember(ctx *gin.Context, adminUserID int64, email str
 
 	if potentialMemberUser.FamilyAdminID != nil {
 		return stacktrace.Propagate(ente.ErrCanNotInviteUserAlreadyInFamily, "invited member is already a part of family")
-	}
-	potentialMemberSub, err := c.BillingCtrl.GetSubscription(ctx, potentialMemberID)
-	if err != nil {
-		return stacktrace.Propagate(err, "")
-	}
-	if billing.IsActivePaidPlan(potentialMemberSub) && !potentialMemberSub.Attributes.IsCancelled {
-		return stacktrace.Propagate(ente.ErrCanNotInviteUserWithPaidPlan, "")
 	}
 
 	inviteToken, err := auth.GenerateURLSafeRandomString(InviteTokenLength)

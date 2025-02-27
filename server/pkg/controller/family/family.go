@@ -9,7 +9,6 @@ import (
 	"github.com/ente-io/museum/pkg/utils/time"
 
 	"github.com/ente-io/museum/ente"
-	"github.com/ente-io/museum/pkg/controller"
 	"github.com/ente-io/museum/pkg/repo"
 	"github.com/sirupsen/logrus"
 
@@ -23,7 +22,6 @@ const (
 
 // Controller exposes functions to interact with family module
 type Controller struct {
-	BillingCtrl   *controller.BillingController
 	UserRepo      *repo.UserRepository
 	FamilyRepo    *repo.FamilyRepository
 	UserCacheCtrl *usercache.Controller
