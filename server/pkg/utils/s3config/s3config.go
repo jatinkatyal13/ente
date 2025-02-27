@@ -136,7 +136,7 @@ func (config *S3Config) initialize() {
 				viper.GetString("s3."+dc+".secret"), ""),
 			Endpoint:         aws.String(viper.GetString("s3." + dc + ".endpoint")),
 			Region:           aws.String(viper.GetString("s3." + dc + ".region")),
-			S3ForcePathStyle: aws.Bool(false),
+			S3ForcePathStyle: aws.Bool(true),
 		}
 		if usePathStyleURLs {
 			s3Config.S3ForcePathStyle = aws.Bool(true)
