@@ -2,6 +2,7 @@ package s3config
 
 import (
 	"fmt"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -133,8 +134,9 @@ func (config *S3Config) initialize() {
 		s3Config := aws.Config{
 			Credentials: credentials.NewStaticCredentials(viper.GetString("s3."+dc+".key"),
 				viper.GetString("s3."+dc+".secret"), ""),
-			Endpoint: aws.String(viper.GetString("s3." + dc + ".endpoint")),
-			Region:   aws.String(viper.GetString("s3." + dc + ".region")),
+			Endpoint:         aws.String(viper.GetString("s3." + dc + ".endpoint")),
+			Region:           aws.String(viper.GetString("s3." + dc + ".region")),
+			S3ForcePathStyle: aws.Bool(false),
 		}
 		if usePathStyleURLs {
 			s3Config.S3ForcePathStyle = aws.Bool(true)
